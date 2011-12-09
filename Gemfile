@@ -7,7 +7,6 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -17,16 +16,25 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'mongoid', '~> 2.3.2'
+gem 'bson_ext'
+gem 'dalli'
+gem 'decent_exposure'
+gem 'simple_form'
+gem 'redis'
+gem 'unicorn'
+gem 'stripe'
+gem 'lazy_high_charts', '~> 1.1.5'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'rspec-rails', :group => [:test, :development]
+group :test do
+  gem 'turn', '~> 0.8.3', :require => false
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+end
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
+group :development do
+  gem 'thin'
+end
