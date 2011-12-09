@@ -26,6 +26,7 @@ gem 'redis'
 gem 'unicorn'
 gem 'stripe'
 gem 'lazy_high_charts', '~> 1.1.5'
+gem 'bootstrap-sass', '1.4.1'
 
 gem 'rspec-rails', :group => [:test, :development]
 group :test do
