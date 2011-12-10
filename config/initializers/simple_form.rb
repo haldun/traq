@@ -11,7 +11,7 @@ SimpleForm.setup do |config|
   # config.hint_class = :hint
 
   # CSS class used on errors.
-  # config.error_class = :error
+  config.error_class = 'help-inline'
 
   # Default tag used on errors.
   # config.error_tag = :span
@@ -20,10 +20,10 @@ SimpleForm.setup do |config|
   # config.error_method = :first
 
   # Default tag used for error notification helper.
-  # config.error_notification_tag = :p
+  config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
-  # config.error_notification_class = :error_notification
+  config.error_notification_class = 'alert-message error'
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -32,10 +32,10 @@ SimpleForm.setup do |config|
   # config.wrapper_tag = :div
 
   # CSS class to add to all wrapper tags.
-  # config.wrapper_class = :input
+  config.wrapper_class = :clearfix
 
   # CSS class to add to the wrapper if the field has errors.
-  # config.wrapper_error_class = :field_with_errors
+  config.wrapper_error_class = :error
 
   # You can wrap a collection of radio/check boxes in a pre-defined tag, defaulting to none.
   # config.collection_wrapper_tag = nil
@@ -56,14 +56,14 @@ SimpleForm.setup do |config|
   # config.label_class = nil
 
   # You can define the class to use on all forms. Default is simple_form.
-  # config.form_class = :simple_form
+  config.form_class = 'form-stacked'
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
 
   # Tell browsers whether to use default HTML5 validations (novalidate option).
   # Default is enabled.
-  # config.browser_validations = true
+  config.browser_validations = false
 
   # Determines whether HTML5 types (:email, :url, :search, :tel) and attributes
   # (e.g. required) are used or not. True by default.

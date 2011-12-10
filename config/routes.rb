@@ -3,8 +3,9 @@ Traq::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
 
-  resources :users, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :sites
+  resources :users, :only => [:new, :create]
 
   root to: 'home#index'
 end

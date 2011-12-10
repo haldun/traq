@@ -1,4 +1,6 @@
 #hede {
   padding: 10px;
   @include box-shadow();
+  @include center-block;
+  @include clearfix;
 }

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111209171141) do
+ActiveRecord::Schema.define(:version => 20111210110340) do
+
+  create_table "sites", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "url"
+    t.string   "time_zone"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sites", ["token"], :name => "index_sites_on_token"
+  add_index "sites", ["user_id"], :name => "index_sites_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= site.user %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= site.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= site.url %>
+</p>
+
+<p>
+  <b>Time zone:</b>
+  <%= site.time_zone %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%= site.token %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_path(site) %> |
+<%= link_to 'Back', sites_path %>
