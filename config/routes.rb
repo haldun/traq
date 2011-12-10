@@ -8,4 +8,6 @@ Traq::Application.routes.draw do
   resources :users, :only => [:new, :create]
 
   root to: 'home#index'
+
+  match 't' => TrackApp, :via => [:get, :post]
 end
